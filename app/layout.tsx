@@ -13,9 +13,8 @@ const _inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "AI 搜索优化——泓动数据",
+  description: "抢占AI营销时代先机 让AI搜索为企业发声",
 }
 
 export default function RootLayout({
@@ -24,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="zh">
       <body className={`font-sans antialiased ${_inter.variable}`}>
         {children}
         <Analytics />

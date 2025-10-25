@@ -5,13 +5,16 @@ import { useInView } from "framer-motion"
 import { useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Shield, DollarSign, Zap } from "lucide-react"
+import { PhoneCall } from "lucide-react"
+import { ConsultationWidget } from "@/components/consultation-widget"
+import { CallDialog } from "@/components/call-dialog"
 
 
 export function ContactSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [formData, setFormData] = useState({ name: "", phone: "" })
+  const [callDialogOpen, setCallDialogOpen] = useState(false)
 
   return (
     <section className="py-24 px-6 lg:px-8 relative overflow-hidden">
@@ -39,14 +42,23 @@ export function ContactSection() {
               <div className="space-y-4 text-accent-foreground">
                 <div>
                   <p className="text-xl mb-2">全国服务热线：</p>
-                  <p className="text-4xl font-bold">400-926-9885</p>
+                  <button
+                    type="button"
+                    onClick={() => setCallDialogOpen(true)}
+                    className="group inline-flex items-center gap-3 rounded-2xl bg-accent text-accent-foreground px-6 py-3 text-3xl font-bold shadow-xl shadow-accent/30 transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/40"
+                  >
+                    <span className="rounded-full bg-white/20 p-2">
+                      <PhoneCall className="h-6 w-6" />
+                    </span>
+                    400-926-9885
+                  </button>
                 </div>
                 <div>
                   <p className="text-xl mb-2">微信号：</p>
-                  <p className="text-3xl font-bold">180 4654 5420</p>
+                  <p className="text-3xl font-bold">135 8030 6740</p>
                 </div>
                 <div className="pt-4">
-                  <p className="text-lg">总部：北京市丰台区搜宝商务中心3号楼27层</p>
+                  <p className="text-lg">总部：广东省广州市番禺区南村镇万惠一路 96 号</p>
                 </div>
               </div>
             </div>
@@ -88,6 +100,13 @@ export function ContactSection() {
         </div>
 
       </div>
+      <ConsultationWidget />
+      <CallDialog
+        open={callDialogOpen}
+        onOpenChange={setCallDialogOpen}
+        phoneNumber="400-926-9885"
+        qrImage="/images/contact-wechat-qr.png"
+      />
     </section>
   )
 }
