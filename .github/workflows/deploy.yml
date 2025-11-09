@@ -28,11 +28,29 @@ jobs:
     - name: Build project
       run: yarn build
 
-    - name: Install CloudBase CLI
-      run: npm install -g @cloudbase/cli
+    # - name: Install CloudBase CLI
+    #   run: npm install -g @cloudbase/cli
 
-    - name: Login CloudBase CLI
-      run: tcb login --apiKeyId ${{ secrets.TCB_SECRET_ID }} --apiKey ${{ secrets.TCB_SECRET_KEY }}
+    # - name: Login CloudBase CLI
+    #   run: tcb login --apiKeyId ${{ secrets.TCB_SECRET_ID }} --apiKey ${{ secrets.TCB_SECRET_KEY }}
 
-    - name: Deploy to CloudBase Static Hosting
-      run: tcb hosting deploy ./out -e ${{ secrets.TCB_ENV_ID }}
+    # - name: Deploy to CloudBase Static Hosting
+    #   run: tcb hosting deploy ./out -e ${{ secrets.TCB_ENV_ID }}
+    - name: Deploy via SSH
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USER }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        port: ${{ secrets.EC2_PORT }}
+        script: |
+          # 停止旧服务（如果有）
+          pkill -f next
+
+          # 上传构建文件
+          rsync -avz --delete ./ $HOME/nextjs-app/
+
+          # 进入项目目录并启动服务
+          cd $HOME/nextjs-app
+          yarn install
+          nohup npm run start > app.log 2>&1 &  # 启动生产服务
