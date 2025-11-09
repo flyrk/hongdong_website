@@ -10,7 +10,7 @@ export function CompanyIntro() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section className="py-24 px-6 lg:px-8 bg-muted/30">
+    <section id="company-intro" className="py-24 px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
@@ -32,9 +32,6 @@ export function CompanyIntro() {
                 </p>
               </div>
             </div>
-            <Button size="lg" className="rounded-full px-8 py-6 text-lg">
-              马上咨询
-            </Button>
           </motion.div>
 
           {/* Right side - Image */}

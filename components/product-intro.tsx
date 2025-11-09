@@ -10,7 +10,7 @@ export function ProductIntro() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} id="ai-optimization" className="relative py-20 px-6 lg:px-8 overflow-hidden">
+    <section ref={ref} id="product-intro" className="relative py-20 px-6 lg:px-8 overflow-hidden">
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5"

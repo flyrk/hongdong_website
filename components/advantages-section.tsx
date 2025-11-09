@@ -28,7 +28,9 @@ export function AdvantagesSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-muted/70 via-background to-muted/50 relative overflow-hidden">
+    <section
+      id="advantages"
+      className="py-24 px-6 lg:px-8 bg-gradient-to-br from-muted/70 via-background to-muted/50 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-accent/10" />
 

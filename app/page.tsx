@@ -1,7 +1,8 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { ProductIntro } from "@/components/product-intro"
-import { ApplicationScenarios } from "@/components/application-scenarios"
+import { SuccessCases } from "@/components/success-cases"
+import { CustomerTestimonials } from "@/components/customer-testimonials"
 import { AdvantagesSection } from "@/components/advantages-section"
 import { ServiceProcess } from "@/components/service-process"
 import { CompanyIntro } from "@/components/company-intro"
@@ -14,7 +15,8 @@ export default function Home() {
       <Header />
       <HeroSection />
       <ProductIntro />
-      <ApplicationScenarios />
+      <SuccessCases />
+      <CustomerTestimonials />
       <AdvantagesSection />
       <ServiceProcess />
       <CompanyIntro />

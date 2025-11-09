@@ -18,11 +18,11 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4 text-accent" />
-                <span>咨询热线</span>
+                <span>咨询热线：135 8030 6740</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4 text-accent" />
-                <span>商务合作</span>
+                <span>商务合作：10132127@qq.com</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-accent" />
@@ -50,9 +50,6 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-border/50">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">© 2025 泓动数据有限公司. All rights reserved.</p>
-            <Button variant="outline" className="rounded-full bg-transparent">
-              立即咨询
-            </Button>
           </div>
         </div>
       </div>
