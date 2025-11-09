@@ -14,7 +14,11 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <div className="font-bold text-xl tracking-tight">
-              <span className="text-foreground">HD</span>
+              <img 
+                src="/placeholder-logo.svg" 
+                alt="泓动数据有限公司 Logo" 
+                className="h-8 w-auto"
+              />
             </div>
             <div className="text-sm text-muted-foreground hidden sm:block">泓动数据有限公司</div>
           </div>
