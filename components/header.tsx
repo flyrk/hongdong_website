@@ -15,7 +15,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <div className="font-bold text-xl tracking-tight">
               <img 
-                src="/placeholder-logo.svg" 
+                src="/logo.jpg" 
                 alt="泓动数据有限公司 Logo" 
                 className="h-8 w-auto"
               />

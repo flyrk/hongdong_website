@@ -13,8 +13,68 @@ const _inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "AI 搜索优化——泓动数据",
-  description: "抢占AI营销时代先机 让AI搜索为企业发声",
+  title: {
+    default: "GEO生成式引擎优化专家 - 泓动数据科技有限公司官网",
+    template: "%s | 泓动数据科技有限公司"
+  },
+  description: "泓动数据科技有限公司专注于GEO生成式引擎优化、AI搜索优化、短视频截流和抖音代运营服务，帮助企业提升在线可见性和流量转化。",
+  keywords: [
+    "泓动数据",
+    "GEO优化",
+    "AI搜索优化",
+    "短视频截流",
+    "抖音代运营",
+    "数据科技",
+    "搜索引擎优化",
+    "SEO优化",
+    "内容营销"
+  ],
+  authors: [{ name: "泓动数据科技有限公司" }],
+  creator: "泓动数据科技有限公司",
+  publisher: "泓动数据科技有限公司",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: '/icon.png' },
+      { url: '/favicon.ico' },
+    ],
+    apple: { url: '/apple-icon.png', sizes: '180x180' },
+  },
+  openGraph: {
+    title: "GEO生成式引擎优化专家 - 泓动数据科技有限公司官网",
+    description: "泓动数据科技有限公司专注于GEO生成式引擎优化、AI搜索优化、短视频截流和抖音代运营服务，帮助企业提升在线可见性和流量转化。",
+    url: "https://hongdong.com", // 请替换为实际域名
+    siteName: "泓动数据科技有限公司",
+    images: [
+      {
+        url: "/images/hero-tech-bg.jpg", // 请替换为实际的OG图片路径
+        width: 1200,
+        height: 630,
+        alt: "泓动数据科技有限公司"
+      }
+    ],
+    locale: "zh_CN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GEO生成式引擎优化专家 - 泓动数据科技有限公司官网",
+    description: "泓动数据科技有限公司专注于GEO生成式引擎优化、AI搜索优化、短视频截流和抖音代运营服务，帮助企业提升在线可见性和流量转化。",
+    images: ["/images/hero-tech-bg.jpg"], // 请替换为实际的Twitter卡片图片路径
+  },
+  alternates: {
+    canonical: "https://hongdong.com", // 请替换为实际域名
+  },
 }
 
 export default function RootLayout({
