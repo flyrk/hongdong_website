@@ -82,8 +82,8 @@ export function ServiceProcess() {
                 <div className="bg-card rounded-3xl p-8 h-full shadow-lg hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-primary/50 hover:-translate-y-2">
                   {/* Icon */}
                   <div className="mb-6">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-8 h-8 text-primary" />
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-blue-600/30 transition-all">
+                      <Icon className="w-8 h-8 text-blue-600" />
                     </div>
                   </div>
 
@@ -106,7 +106,7 @@ export function ServiceProcess() {
                   {/* CTA Link */}
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all group/link"
+                    className="inline-flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all group/link"
                   >
                     咨询详情
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
