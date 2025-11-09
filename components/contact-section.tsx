@@ -41,19 +41,6 @@ export function ContactSection() {
               <h2 className="text-5xl lg:text-6xl font-bold text-accent-foreground mb-8">联系我们</h2>
               <div className="space-y-4 text-accent-foreground">
                 <div>
-                  <p className="text-xl mb-2">全国服务热线：</p>
-                  <button
-                    type="button"
-                    onClick={() => setCallDialogOpen(true)}
-                    className="group inline-flex items-center gap-3 rounded-2xl bg-accent text-accent-foreground px-6 py-3 text-3xl font-bold shadow-xl shadow-accent/30 transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/40"
-                  >
-                    <span className="rounded-full bg-white/20 p-2">
-                      <PhoneCall className="h-6 w-6" />
-                    </span>
-                    400-926-9885
-                  </button>
-                </div>
-                <div>
                   <p className="text-xl mb-2">微信号：</p>
                   <p className="text-3xl font-bold">135 8030 6740</p>
                 </div>
