@@ -44,13 +44,10 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         port: ${{ secrets.EC2_PORT }}
         script: |
-          # 停止旧服务（如果有）
-          pkill -f next
-
-          # 上传构建文件
+          set -ex
+          pkill -f next || true
           rsync -avz --delete ./ $HOME/nextjs-app/
-
-          # 进入项目目录并启动服务
           cd $HOME/nextjs-app
           yarn install
-          nohup npm run start > app.log 2>&1 &  # 启动生产服务
+          nohup npm run start > app.log 2>&1 &
+          sleep 10  # Allows server to start before disconnect
