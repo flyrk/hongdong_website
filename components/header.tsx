@@ -20,7 +20,7 @@ export function Header() {
                 className="h-8 w-auto"
               />
             </div>
-            <div className="text-sm text-muted-foreground hidden sm:block">泓动数据有限公司</div>
+            <div className="text-sm text-muted-foreground hidden sm:block">广州泓动数据有限公司</div>
           </div>
 
           <nav className="hidden md:flex items-center gap-8">
