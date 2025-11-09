@@ -28,29 +28,29 @@ jobs:
     - name: Build project
       run: yarn build
 
-    # - name: Install CloudBase CLI
-    #   run: npm install -g @cloudbase/cli
+    - name: Install CloudBase CLI
+      run: npm install -g @cloudbase/cli
 
-    # - name: Login CloudBase CLI
-    #   run: tcb login --apiKeyId ${{ secrets.TCB_SECRET_ID }} --apiKey ${{ secrets.TCB_SECRET_KEY }}
+    - name: Login CloudBase CLI
+      run: tcb login --apiKeyId ${{ secrets.TCB_SECRET_ID }} --apiKey ${{ secrets.TCB_SECRET_KEY }}
 
-    # - name: Deploy to CloudBase Static Hosting
-    #   run: tcb hosting deploy ./out -e ${{ secrets.TCB_ENV_ID }}
-    - name: Deploy via SSH
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.EC2_HOST }}
-        username: ${{ secrets.EC2_USER }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        port: ${{ secrets.EC2_PORT }}
-        script: |
-          set -ex
-          pkill -f next || true
-          rsync -avz --delete ./ $HOME/hongdong_website/
-          cd $HOME/hongdong_website
-          yarn install
-          # use pm2 to start/restart
-          # pm2 restart hongdong_website || pm2 start npm --name "hongdong_website" -- start
-          # pm2 save
-          # sleep 10  # Allows server to start before disconnect
-          # pm2 list
+    - name: Deploy to CloudBase Static Hosting
+      run: tcb hosting deploy ./out -e ${{ secrets.TCB_ENV_ID }}
+    # - name: Deploy via SSH
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.EC2_HOST }}
+    #     username: ${{ secrets.EC2_USER }}
+    #     key: ${{ secrets.EC2_SSH_KEY }}
+    #     port: ${{ secrets.EC2_PORT }}
+    #     script: |
+    #       set -ex
+    #       pkill -f next || true
+    #       rsync -avz --delete ./ $HOME/hongdong_website/
+    #       cd $HOME/hongdong_website
+    #       yarn install
+    #       # use pm2 to start/restart
+    #       # pm2 restart hongdong_website || pm2 start npm --name "hongdong_website" -- start
+    #       # pm2 save
+    #       # sleep 10  # Allows server to start before disconnect
+    #       # pm2 list
