@@ -50,6 +50,7 @@ jobs:
           cd $HOME/hongdong_website
           yarn install
           # use pm2 to start/restart
-          pm2 restart hongdong_website || pm2 start npm --name "hongdong_website" -- start
-          pm2 save
-          sleep 10  # Allows server to start before disconnect
+          # pm2 restart hongdong_website || pm2 start npm --name "hongdong_website" -- start
+          # pm2 save
+          # sleep 10  # Allows server to start before disconnect
+          # pm2 list
