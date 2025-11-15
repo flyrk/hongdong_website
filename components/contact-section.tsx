@@ -25,7 +25,7 @@ export function ContactSection() {
     {
       icon: Mail,
       title: "邮箱",
-      content: "10132127@qq.com",
+      content: "412735649@qq.com",
       description: "商务合作咨询",
     },
   ]
