@@ -84,7 +84,7 @@ export function Header() {
           </nav>
 
           <Button
-            onClick={() => (window.location.href = "tel:400-926-9885")}
+            onClick={() => (window.location.href = "tel:+86-135-8030-6740")}
             className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full px-6"
           >
             <Phone className="w-4 h-4 mr-2" />
