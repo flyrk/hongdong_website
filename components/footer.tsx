@@ -161,7 +161,15 @@ export function Footer() {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-500 text-center md:text-left">
-              © 2025 泓动数据科技有限公司 版权所有
+              © 2025 泓动数据科技有限公司 版权所有 |{" "}
+              <a
+                href="https://beian.miit.gov.cn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition-colors"
+              >
+                粤ICP备2024282925号
+              </a>
             </p>
             <div className="flex items-center gap-6">
               {legalLinks.map((link) => (
